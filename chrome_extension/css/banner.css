@@ -1,6 +1,15 @@
 .redline-banner--fake {
-    background-image: url("https://i.imgur.com/CFuV1bQ.png");
+    /* background-image: url("https://i.imgur.com/VzRFixb.jpg"); */
+    background-image: url("https://i.imgur.com/rRD79Y4.jpg");
     border-bottom: solid 2px red;
+}
+
+.redline-banner--true {
+    background-image: url("https://i.imgur.com/a1D0lbN.jpg");
+    border-bottom: solid 2px green;
+}
+
+.redline-banner {
     text-align: center;
     font: Tahoma, Geneva, sans-serif;
     vertical-align: middle;
@@ -40,6 +49,7 @@
 .banner__rating {
     float: right;
     display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
