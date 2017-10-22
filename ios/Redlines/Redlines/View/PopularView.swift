@@ -8,6 +8,5 @@
 
 import UIKit
 
-class PopularView: UIView {
-    
+class PopularView: UITableView {
 }
