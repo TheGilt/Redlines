@@ -15,7 +15,7 @@ $con = sqlsrv_connect($serverName, $connectionOptions);
 
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT * FROM Articles as A WHERE A.title LIKE '%##" . $phrase . "##%'";
+$sql = "SELECT * FROM Articles as A WHERE A.title LIKE '%" . $phrase . "%'";
 
 $getResults= sqlsrv_query($con, $sql);
 
