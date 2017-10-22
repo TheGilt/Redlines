@@ -1,6 +1,6 @@
 <?php
 // get URL
-$urlLong = $_GET['urlLong'];
+$urlLong = "www.test.com"
 
 
 $serverName = "redlines.database.windows.net";
