@@ -1,14 +1,15 @@
 {
-  "manifest_version": 2,
-  "name": "My Extension",
-  "version": "1.0",
-  "description": "Fake news reporter",
-  "icons": {"128": "images/icon128.png",
-            "48": "images/icon48.png"
-  },
-  "page_action": {
-    "default_popup": "popup.html",
-    "default_title": "Readlines",
-    "default_icon": "images/icon128.png"
-  }
+    "manifest_version": 2,
+    "name": "My Extension",
+    "version": "1.0",
+    "description": "Fake news reporter",
+    "icons": {
+        "128": "images/icon128.png",
+        "48": "images/icon48.png"
+    },
+    "browser_action": {
+        "default_popup": "html/popup.html",
+        "default_title": "Readlines",
+        "default_icon": "images/icon128.png"
+    }
 }
