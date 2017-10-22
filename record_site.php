@@ -16,11 +16,12 @@ $con = sqlsrv_connect($serverName, $connectionOptions);
 
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT url_long FROM Articles as A WHERE A.url_long = '" . $urlLong . "';";
+$sql = "SELECT url_long FROM Articles as A WHERE A.urllong = '" . $urlLong . "';";
 
 $getResults= sqlsrv_query($con, $sql);
 
 if (sizeof($getResults) == 0) {
+	echo("reached");
 	$sql = "INSERT INTO dbo.Articles (url_long, upvotes, downvotes, title, wiki)
 	VALUES ('" . urlLong . "', 0, 0, '" . title . "', '');";
 	$getResults= sqlsrv_query($con, $sql);
