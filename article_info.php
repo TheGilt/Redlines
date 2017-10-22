@@ -2,7 +2,6 @@
 // get URL
 $urlLong = $_GET['urlLong'];
 
-echo($urlLong);
 
 $serverName = "redlines.database.windows.net";
 $connectionOptions = array(
