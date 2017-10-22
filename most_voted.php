@@ -12,7 +12,7 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT TOP $num_articles * FROM Articles as A ORDER BY A.downvotes + A.upvotes desc";
+$sql = "SELECT TOP " . $num_articles . " * FROM Articles as A ORDER BY A.downvotes + A.upvotes desc";
 if ($result = mysqli_query($con, $sql))
 {
 	// If so, then create a results array and a temporary one
