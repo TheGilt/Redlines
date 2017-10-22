@@ -18,12 +18,11 @@ $sql = "SELECT upvotes, downvotes, title, wiki FROM Articles as A WHERE A.url_lo
 	'" . $urlLong . "';";
 
 $getResults= sqlsrv_query($con, $sql);
-echo($getResults);
 	
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-	echo ($row['url_long'] . " " . $row['upvotes'] . PHP_EOL);
+	echo ($row['title'] . " " . $row['upvotes'] . PHP_EOL);
 }
 
  
