@@ -1,11 +1,19 @@
 .container {
     margin: 15px 15px 15px 15px;
-    background-image: url("images/background-main.png");
+    height: 100%;
+    border-radius: 5px;
+    border: transparent;
+    background-color: burlywood;
+    /* background-image: url("https://i.imgur.com/1KVUvyK.png"); */
+}
+
+.header {
+    display: inline-block;
 }
 
 .popup {
     display: block;
-    width: 300px;
+    width: 200px;
     height: 300px;
     background-image: url("background-fake.png");
 }
@@ -13,17 +21,15 @@
 .banner {
     margin-left: 15px;
     margin-top: 15px;
-    width: 40%;
     float: left;
-    background-color: blanchedalmond;
     border-radius: 2px;
-    border: solid, 1px, black;
     text-align: center;
     font-family: "Georgia", serif;
 }
 
 .logo {
     text-align: center;
+    display: block;
 }
 
 .login {
