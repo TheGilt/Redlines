@@ -20,10 +20,11 @@ $sql = "SELECT url_long FROM Articles as A WHERE A.url_long = '" . $urlLong . "'
 
 $getResults= sqlsrv_query($con, $sql);
 
-if (sizeof($getResults) == 0)
+if (sizeof($getResults) == 0) {
 	$sql = "INSERT INTO dbo.Articles (url_long, upvotes, downvotes, title, wiki)
 	VALUES ('" . urlLong . "', 0, 0, '" . title . "', '');";
 	$getResults= sqlsrv_query($con, $sql);
+}
 
 
  
