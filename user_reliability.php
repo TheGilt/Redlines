@@ -16,7 +16,7 @@ $con = sqlsrv_connect($serverName, $connectionOptions);
 $sql = "WITH correct(cnt) as (SELECT count(*) FROM UserVotes as U, Articles as A WHERE U.user_id = '" . $user . "' and U.url_long = A.url_long and 
 	(U.vote + A.upvotes - A.downvotes > A.upvotes - A.downvotes and A.upvotes - A.downvotes > 0) or
 	(U.vote + A.upvotes - A.downvotes < A.upvotes - A.downvotes and A.upvotes - A.downvotes < 0)),
-	total(ttl) as (SELECT count(*) FROM UserVotes as U WHERE U.user_id = 'user')
+	total(ttl) as (SELECT count(*) FROM UserVotes as U WHERE U.user_id = '" . $user . "')
 
 	SELECT (Cast(C.cnt as real))/T.ttl * 100, T.ttl
 	FROM correct as C, total as T";
