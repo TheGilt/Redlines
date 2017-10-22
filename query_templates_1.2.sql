@@ -80,3 +80,31 @@ SELECT upvotes, downvotes
 FROM WebSources as W
 WHERE W.url_short = '##parsed short url##';
 
+/*
+PRIMARY FUNCTION get most voted
+*/
+SELECT TOP ##num_articles## *
+FROM Articles as A
+ORDER BY A.downvotes + A.upvotes desc
+
+/*
+PRIMARY FUNCTION get articles by title phrase
+*/
+SELECT *
+FROM Articles as A
+WHERE A.title LIKE '%##phrase##%'
+
+/*
+PRIMARY FUNCTION update wiki
+*/
+UPDATE Articles
+SET wiki = '##wiki##'
+WHERE url_long = '##url##'
+
+/*
+PRIMARY FUNCTION check if user has voted on article
+*/
+SELECT U.vote
+FROM UserVotes as U
+WHERE U.user_id = '##user##' and U.url_long = '##url##'
+
