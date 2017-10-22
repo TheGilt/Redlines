@@ -12,5 +12,5 @@
         "default_title": "Readlines",
         "default_icon": "images/icon128.png"
     },
-    "permissions": ["tabs"],
+    "permissions": ["tabs"]
 }
