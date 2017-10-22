@@ -7,11 +7,11 @@ $connectionOptions = array(
     "PWD" => "Dubhacks17"
 );
 //Establishes the connection
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-echo($conn);
+$pickle = sqlsrv_connect($serverName, $connectionOptions);
+echo($pickle);
 
 $tsql= "SELECT * FROM Articles";
-$getResults= sqlsrv_query($conn, $tsql);
+$getResults= sqlsrv_query($pickle, $tsql);
 echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
