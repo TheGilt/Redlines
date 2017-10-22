@@ -22,7 +22,7 @@ $getResults= sqlsrv_query($con, $sql);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-	echo ($row['title'] . " " . $row['upvotes'] . PHP_EOL);
+	echo json_encode($row);
 }
 
  
