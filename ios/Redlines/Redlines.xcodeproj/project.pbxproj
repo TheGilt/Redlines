@@ -18,6 +18,8 @@
 		22832B571F9C4222000229B2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22832B561F9C4222000229B2 /* FBSDKCoreKit.framework */; };
 		22832B591F9C422B000229B2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22832B581F9C422B000229B2 /* FBSDKLoginKit.framework */; };
 		22832B7F1F9C4551000229B2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22832B7E1F9C4551000229B2 /* Bolts.framework */; };
+		22832B811F9C4F40000229B2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B801F9C4F40000229B2 /* ProfileView.swift */; };
+		22832B831F9C5D51000229B2 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B821F9C5D51000229B2 /* PopularView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		22832B561F9C4222000229B2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		22832B581F9C422B000229B2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		22832B7E1F9C4551000229B2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../../../FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
+		22832B801F9C4F40000229B2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		22832B821F9C5D51000229B2 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				22832B511F9C37D1000229B2 /* SearchView.swift */,
+				22832B821F9C5D51000229B2 /* PopularView.swift */,
+				22832B801F9C4F40000229B2 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 				22832B401F9C329B000229B2 /* PopularViewController.swift in Sources */,
 				22832B541F9C40EA000229B2 /* ProfileViewController.swift in Sources */,
 				22832B3C1F9C329A000229B2 /* AppDelegate.swift in Sources */,
+				22832B811F9C4F40000229B2 /* ProfileView.swift in Sources */,
+				22832B831F9C5D51000229B2 /* PopularView.swift in Sources */,
 				22832B3E1F9C329B000229B2 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
