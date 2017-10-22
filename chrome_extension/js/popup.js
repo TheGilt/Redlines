@@ -7,5 +7,23 @@ window.addEventListener('load', function (evt) {
 
 // Listen to messages from the payload.js script and write to popout.html
 chrome.runtime.onMessage.addListener(function (message) {
-	document.getElementById('pagetitle').innerHTML = message;
+	var url = message.url;
+	$.ajax({
+		url: 'http://localhost/article_info.php',
+	    type: "POST",
+	    dataType:'json', // add json datatype to get json
+	    data: ({urlLong: url}), 
+	    success: function(data) {
+	        var res = jQuery.parseJSON(data);
+	        var upvotes = res[0];
+	        var downvotes = res[1];
+	        var title = res[2];
+	        var wiki = res[3];
+	        // inject ratio of upvotes to downvotes to banner to decide which 
+	        // html to display
+	    },
+	    error: function(e) {
+	        alert("error");
+	    }
+	});
 });

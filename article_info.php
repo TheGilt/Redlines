@@ -1,5 +1,7 @@
 <?php
- 
+// get URL
+$urlLong = $_GET['urlLong'];
+
 // Create connection
 $con=mysqli_connect("redlines.database.windows.net","redlines","Dubhacks17","redlines_dubhacks2017");
  
@@ -10,7 +12,8 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT upvotes, downvotes, title, wiki FROM dbo.Articles as A WHERE A.url_long = '##url##';";
+$sql = "SELECT upvotes, downvotes, title, wiki FROM dbo.Articles as A WHERE A.url_long = 
+	'##" . $urlLong . "##';";
 if ($result = mysqli_query($con, $sql))
 {
 	// If so, then create a results array and a temporary one

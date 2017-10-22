@@ -1,4 +1,8 @@
 <?php
+// get arguments
+$user = $_GET['user'];
+$url = $_GET['url'];
+
  
 // Create connection
 $con=mysqli_connect("redlines.database.windows.net","redlines","Dubhacks17","redlines_dubhacks2017");
@@ -10,7 +14,7 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT U.vote FROM UserVotes as U WHERE U.user_id = '##user##' and U.url_long = '##url##'";
+$sql = "SELECT U.vote FROM UserVotes as U WHERE U.user_id = '##" . $user . "##' and U.url_long = '##" . $url . "##'";
 if ($result = mysqli_query($con, $sql))
 {
 	// If so, then create a results array and a temporary one

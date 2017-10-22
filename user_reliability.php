@@ -1,5 +1,5 @@
 <?php
- 
+$user = $_GET['user']; 
 // Create connection
 $con=mysqli_connect("redlines.database.windows.net","redlines","Dubhacks17","redlines_dubhacks2017");
  
@@ -10,7 +10,7 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "WITH correct(cnt) as (SELECT count(*) FROM UserVotes as U, Articles as A WHERE U.user_id = '##user##' and U.url_long = A.url_long and 
+$sql = "WITH correct(cnt) as (SELECT count(*) FROM UserVotes as U, Articles as A WHERE U.user_id = '##" . $user . "##' and U.url_long = A.url_long and 
 	(U.vote + A.upvotes - A.downvotes > A.upvotes - A.downvotes and A.upvotes - A.downvotes > 0) or
 	(U.vote + A.upvotes - A.downvotes < A.upvotes - A.downvotes and A.upvotes - A.downvotes < 0)),
 	total(ttl) as (SELECT count(*) FROM UserVotes as U WHERE U.user_id = '##user##')

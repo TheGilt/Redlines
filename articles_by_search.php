@@ -1,5 +1,7 @@
 <?php
- 
+// get phrase input
+$phrase = $_GET['phrase']; 
+
 // Create connection
 $con=mysqli_connect("redlines.database.windows.net","redlines","Dubhacks17","redlines_dubhacks2017");
  
@@ -10,7 +12,7 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT * FROM Articles as A WHERE A.title LIKE '%##phrase##%'";
+$sql = "SELECT * FROM Articles as A WHERE A.title LIKE '%##" . $phrase . "##%'";
 if ($result = mysqli_query($con, $sql))
 {
 	// If so, then create a results array and a temporary one
