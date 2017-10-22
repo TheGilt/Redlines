@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		22832B3C1F9C329A000229B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B3B1F9C329A000229B2 /* AppDelegate.swift */; };
-		22832B3E1F9C329B000229B2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B3D1F9C329B000229B2 /* FirstViewController.swift */; };
-		22832B401F9C329B000229B2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B3F1F9C329B000229B2 /* SecondViewController.swift */; };
+		22832B3E1F9C329B000229B2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B3D1F9C329B000229B2 /* SearchViewController.swift */; };
+		22832B401F9C329B000229B2 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B3F1F9C329B000229B2 /* PopularViewController.swift */; };
 		22832B431F9C329B000229B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22832B411F9C329B000229B2 /* Main.storyboard */; };
 		22832B451F9C329B000229B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22832B441F9C329B000229B2 /* Assets.xcassets */; };
 		22832B481F9C329B000229B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22832B461F9C329B000229B2 /* LaunchScreen.storyboard */; };
+		22832B521F9C37D1000229B2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B511F9C37D1000229B2 /* SearchView.swift */; };
+		22832B541F9C40EA000229B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B531F9C40EA000229B2 /* ProfileViewController.swift */; };
+		22832B571F9C4222000229B2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22832B561F9C4222000229B2 /* FBSDKCoreKit.framework */; };
+		22832B591F9C422B000229B2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22832B581F9C422B000229B2 /* FBSDKLoginKit.framework */; };
+		22832B7F1F9C4551000229B2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22832B7E1F9C4551000229B2 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22832B381F9C329A000229B2 /* Redlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redlines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22832B3B1F9C329A000229B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22832B3D1F9C329B000229B2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		22832B3F1F9C329B000229B2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		22832B3D1F9C329B000229B2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		22832B3F1F9C329B000229B2 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		22832B421F9C329B000229B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22832B441F9C329B000229B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22832B471F9C329B000229B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22832B491F9C329B000229B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22832B511F9C37D1000229B2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		22832B531F9C40EA000229B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22832B561F9C4222000229B2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		22832B581F9C422B000229B2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		22832B7E1F9C4551000229B2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../../../FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22832B7F1F9C4551000229B2 /* Bolts.framework in Frameworks */,
+				22832B591F9C422B000229B2 /* FBSDKLoginKit.framework in Frameworks */,
+				22832B571F9C4222000229B2 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,14 +70,43 @@
 			isa = PBXGroup;
 			children = (
 				22832B3B1F9C329A000229B2 /* AppDelegate.swift */,
-				22832B3D1F9C329B000229B2 /* FirstViewController.swift */,
-				22832B3F1F9C329B000229B2 /* SecondViewController.swift */,
+				22832B4F1F9C37B1000229B2 /* Controller */,
+				22832B501F9C37BE000229B2 /* View */,
+				22832B551F9C41F6000229B2 /* Frameworks */,
 				22832B411F9C329B000229B2 /* Main.storyboard */,
 				22832B441F9C329B000229B2 /* Assets.xcassets */,
 				22832B461F9C329B000229B2 /* LaunchScreen.storyboard */,
 				22832B491F9C329B000229B2 /* Info.plist */,
 			);
 			path = Redlines;
+			sourceTree = "<group>";
+		};
+		22832B4F1F9C37B1000229B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22832B3F1F9C329B000229B2 /* PopularViewController.swift */,
+				22832B531F9C40EA000229B2 /* ProfileViewController.swift */,
+				22832B3D1F9C329B000229B2 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22832B501F9C37BE000229B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22832B511F9C37D1000229B2 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22832B551F9C41F6000229B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22832B7E1F9C4551000229B2 /* Bolts.framework */,
+				22832B561F9C4222000229B2 /* FBSDKCoreKit.framework */,
+				22832B581F9C422B000229B2 /* FBSDKLoginKit.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22832B401F9C329B000229B2 /* SecondViewController.swift in Sources */,
+				22832B521F9C37D1000229B2 /* SearchView.swift in Sources */,
+				22832B401F9C329B000229B2 /* PopularViewController.swift in Sources */,
+				22832B541F9C40EA000229B2 /* ProfileViewController.swift in Sources */,
 				22832B3C1F9C329A000229B2 /* AppDelegate.swift in Sources */,
-				22832B3E1F9C329B000229B2 /* FirstViewController.swift in Sources */,
+				22832B3E1F9C329B000229B2 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +324,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AN2C295R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Redlines/Frameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "~/Documents/FacebookSDK";
 				INFOPLIST_FILE = Redlines/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kennan.Redlines;
@@ -295,6 +344,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AN2C295R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Redlines/Frameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "~/Documents/FacebookSDK";
 				INFOPLIST_FILE = Redlines/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kennan.Redlines;
