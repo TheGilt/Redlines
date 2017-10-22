@@ -2,22 +2,21 @@
 // get URL
 $urlLong = $_GET['urlLong'];
 
-// Create connection
-$con=mysqli_connect("redlines.database.windows.net","redlines","Dubhacks17","redlines_dubhacks2017");
- 
-// Check connection
-if (mysqli_connect_errno())
-{
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
+$serverName = "redlines.database.windows.net";
+$connectionOptions = array(
+    "Database" => "redlines_dubhacks2017",
+    "Uid" => "redlines",
+    "PWD" => "Dubhacks17"
+);
+//Establishes the connection
+$con = sqlsrv_connect($serverName, $connectionOptions);
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
 $sql = "SELECT upvotes, downvotes, title, wiki FROM dbo.Articles as A WHERE A.url_long = 
-	'##" . $urlLong . "##';";
-if ($result = mysqli_query($con, $sql))
-{
-	// If so, then create a results array and a temporary one
-	// to hold the data
+	'" . $urlLong . "';";
+
+$getResults= sqlsrv_query($con, $sql);
+
 	$resultArray = array();
 	$tempArray = array();
  
@@ -31,10 +30,10 @@ if ($result = mysqli_query($con, $sql))
  
 	// Finally, encode the array to JSON and output the results
 	echo json_encode($resultArray);
-}
+
 
 
  
 // Close connections
-mysqli_close($con);
+sqlsrv_free_stmt($getResults);
 ?>
