@@ -23,6 +23,7 @@
 		22832B861F9C63EC000229B2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B851F9C63EC000229B2 /* Article.swift */; };
 		22832B881F9C6495000229B2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B871F9C6495000229B2 /* Comment.swift */; };
 		22832B8A1F9C655D000229B2 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B891F9C655D000229B2 /* ArticleTableViewCell.swift */; };
+		22832B8C1F9C684E000229B2 /* ArticleOneUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22832B8B1F9C684E000229B2 /* ArticleOneUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		22832B851F9C63EC000229B2 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		22832B871F9C6495000229B2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		22832B891F9C655D000229B2 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		22832B8B1F9C684E000229B2 /* ArticleOneUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOneUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		22832B4F1F9C37B1000229B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22832B8B1F9C684E000229B2 /* ArticleOneUpViewController.swift */,
 				22832B3F1F9C329B000229B2 /* PopularViewController.swift */,
 				22832B531F9C40EA000229B2 /* ProfileViewController.swift */,
 				22832B3D1F9C329B000229B2 /* SearchViewController.swift */,
@@ -106,9 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				22832B891F9C655D000229B2 /* ArticleTableViewCell.swift */,
-				22832B511F9C37D1000229B2 /* SearchView.swift */,
 				22832B821F9C5D51000229B2 /* PopularView.swift */,
 				22832B801F9C4F40000229B2 /* ProfileView.swift */,
+				22832B511F9C37D1000229B2 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				22832B541F9C40EA000229B2 /* ProfileViewController.swift in Sources */,
 				22832B3C1F9C329A000229B2 /* AppDelegate.swift in Sources */,
 				22832B861F9C63EC000229B2 /* Article.swift in Sources */,
+				22832B8C1F9C684E000229B2 /* ArticleOneUpViewController.swift in Sources */,
 				22832B811F9C4F40000229B2 /* ProfileView.swift in Sources */,
 				22832B831F9C5D51000229B2 /* PopularView.swift in Sources */,
 				22832B881F9C6495000229B2 /* Comment.swift in Sources */,
