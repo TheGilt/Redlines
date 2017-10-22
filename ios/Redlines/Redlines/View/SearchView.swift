@@ -42,7 +42,7 @@ class SearchView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        searchBar.frame = CGRect(x: 0, y: 20, width: self.frame.width, height: self.frame.height * 0.08)
+        searchBar.frame = CGRect(x: 0, y: topBarHeight, width: self.frame.width, height: self.frame.height * 0.08)
         placeholderLabel.frame = CGRect(x: 0, y: self.frame.height / 2 - self.frame.height * 0.15, width: self.frame.width, height: self.frame.height * 0.3)
     }
 }
