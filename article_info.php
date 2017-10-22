@@ -16,22 +16,13 @@ $sql = "SELECT upvotes, downvotes, title, wiki FROM dbo.Articles as A WHERE A.ur
 	'" . $urlLong . "';";
 
 $getResults= sqlsrv_query($con, $sql);
-
+echo($getResults);
 	$resultArray = array();
 	$tempArray = array();
- 
-	// Loop through each row in the result set
-	while($row = $result->fetch_object())
-	{
-		// Add each row into our results array
-		$tempArray = $row;
-	    array_push($resultArray, $tempArray);
-	}
- 
-	// Finally, encode the array to JSON and output the results
-	echo json_encode($resultArray);
 
-
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+  echo json_encode($resultArray);
+}
 
  
 // Close connections
