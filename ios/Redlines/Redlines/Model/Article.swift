@@ -13,6 +13,8 @@ class Article {
     var url: String
     var source: String
     var fakeVotes: Int
+    var userVotedFake = false
+    var userVotedReal = false
     var realVotes: Int
     var wiki: String
     var comments: Array<Comment>
