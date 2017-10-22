@@ -33,6 +33,3 @@ chrome.runtime.onMessage.addListener(function(message) {
         }
     });
 });
-
-upvotes = 15;
-downvotes = 20;
