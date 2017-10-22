@@ -11,5 +11,6 @@
         "default_popup": "html/popup.html",
         "default_title": "Readlines",
         "default_icon": "images/icon128.png"
-    }
+    },
+    "permissions": ["tabs"],
 }
