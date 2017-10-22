@@ -17,6 +17,5 @@
         "js": ["jquery-3.2.1.min.js", "js/banner.js"],
         "matches": ["https://www.nytimes.com/*"]
     }],
-    "permissions": ["tabs"],
-    "web_accessible_resources": ["css/background-fake.png"]
+    "permissions": ["tabs"]
 }

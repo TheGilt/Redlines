@@ -1,7 +1,8 @@
 .redline-banner--fake {
     background-image: url("https://i.imgur.com/CFuV1bQ.png");
-    border-bottom: solid 3px darkred;
+    border-bottom: solid 2px red;
     text-align: center;
+    font: Tahoma, Geneva, sans-serif;
     vertical-align: middle;
     font-size: 24px;
     position: fixed;
@@ -11,9 +12,29 @@
 }
 
 .banner__title {
+    width: 220px;
+    background-color: bisque;
+    height: 33px;
+    border: transparent;
+    font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: bold;
+    border-radius: 15px;
     float: left;
     display: inline-block;
-    background-image: url("http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/24/news-icon.png");
+    /* background-image: url("http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/24/news-icon.png"); */
+}
+
+.banner__title__logo {
+    float: left;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.banner__title__text {
+    float: none;
+    text-align: left;
+    padding-left: 35px;
+    margin-top: 2px;
 }
 
 .banner__rating {
