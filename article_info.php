@@ -17,12 +17,10 @@ $sql = "SELECT upvotes, downvotes, title, wiki FROM dbo.Articles as A WHERE A.ur
 
 $getResults= sqlsrv_query($con, $sql);
 echo($getResults);
-	$resultArray = array();
-	$tempArray = array();
+	
 
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 	echo ($row['url_long'] . " " . $row['upvotes'] . PHP_EOL);
-	echo json_encode($resultArray);
 }
 
  
