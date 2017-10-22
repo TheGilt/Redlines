@@ -8,6 +8,8 @@
 
 import UIKit
 
+var topBarHeight: CGFloat = 0;
+
 class SearchViewController: UIViewController, UISearchBarDelegate {
 
     var searchView: SearchView {
@@ -17,6 +19,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchView.searchBar.delegate = self
+        topBarHeight = 20 + (self.navigationController?.navigationBar.frame.size.height)!
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "Search"
     }
 
     // MARK: UISearchBarDelegate
