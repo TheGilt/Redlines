@@ -12,5 +12,11 @@
         "default_title": "Readlines",
         "default_icon": "images/icon128.png"
     },
-    "permissions": ["tabs"]
+    "content_scripts": [{
+        "css": ["css/banner.css"],
+        "js": ["jquery-3.2.1.min.js", "js/banner.js"],
+        "matches": ["https://www.nytimes.com/*"]
+    }],
+    "permissions": ["tabs"],
+    "web_accessible_resources": ["css/background-fake.png"]
 }
