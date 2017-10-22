@@ -13,7 +13,7 @@ class PopularViewController: UIViewController, UITableViewDelegate, UITableViewD
     var mostViewedArticles: Array<Article>!
     var mostVotedArticles: Array<Article>!
     var sc = UISegmentedControl(items: ["Most Views", "Most Votes"])
-    
+
     var popularView: PopularView {
         return self.view as! PopularView
     }
@@ -22,14 +22,16 @@ class PopularViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         mostVotedArticles = getMostVotedArticles()
         mostViewedArticles = getMostViewedArticles()
-        sc.selectedSegmentIndex = 0
+        popularView.delegate = self
+        popularView.dataSource = self
+        if (sc.selectedSegmentIndex != 1) {
+            sc.selectedSegmentIndex = 0
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.topItem?.title = "Popular"
-        popularView.delegate = self
-        popularView.dataSource = self
     }
     
     // MARK: UITableViewDelegate
@@ -37,7 +39,11 @@ class PopularViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if (indexPath.row != 0) {
-            navigationController?.pushViewController(ArticleOneUpViewController(), animated: true)
+            if (sc.selectedSegmentIndex == 0) {
+                navigationController?.pushViewController(ArticleOneUpViewController(article: mostViewedArticles![indexPath.row - 1]), animated: true)
+            } else {
+                navigationController?.pushViewController(ArticleOneUpViewController(article: mostVotedArticles![indexPath.row - 1]), animated: true)
+            }
         }
     }
 
@@ -57,15 +63,16 @@ class PopularViewController: UIViewController, UITableViewDelegate, UITableViewD
             result = UITableViewCell()
             sc.center = CGPoint(x: self.view.center.x, y: result.center.y)
             sc.addTarget(self, action: #selector(PopularViewController.segmentedControlDidChangeValue), for: .valueChanged)
-            sc.selectedSegmentIndex = 0
             result.addSubview(sc)
             result.selectionStyle = .none
         } else {
             result = ArticleTableViewCell()
             if (sc.selectedSegmentIndex == 0) {
                 result.textLabel?.text = mostViewedArticles![indexPath.row - 1].title
+                (result as! ArticleTableViewCell).fakeImageView.isHidden = mostViewedArticles![indexPath.row - 1].fakeVotes <= mostViewedArticles![indexPath.row - 1].realVotes
             } else {
                 result.textLabel?.text = mostVotedArticles![indexPath.row - 1].title
+                (result as! ArticleTableViewCell).fakeImageView.isHidden = mostVotedArticles![indexPath.row - 1].fakeVotes <= mostVotedArticles![indexPath.row - 1].realVotes
             }
         }
         return result
@@ -74,7 +81,7 @@ class PopularViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: private
     
     @objc func segmentedControlDidChangeValue() {
-        
+        popularView.reloadData()
     }
 
     func getMostViewedArticles() -> Array<Article> {
