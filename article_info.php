@@ -2,6 +2,8 @@
 // get URL
 $urlLong = $_GET['urlLong'];
 
+echo($urlLong);
+
 $serverName = "redlines.database.windows.net";
 $connectionOptions = array(
     "Database" => "redlines_dubhacks2017",
@@ -12,7 +14,7 @@ $connectionOptions = array(
 $con = sqlsrv_connect($serverName, $connectionOptions);
  
 // This SQL statement selects ALL from the table 'Locations', but replace with whatever query is necessary
-$sql = "SELECT upvotes, downvotes, title, wiki FROM dbo.Articles as A WHERE A.url_long = 
+$sql = "SELECT upvotes, downvotes, title, wiki FROM Articles as A WHERE A.url_long = 
 	'" . $urlLong . "';";
 
 $getResults= sqlsrv_query($con, $sql);
