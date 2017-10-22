@@ -22,7 +22,7 @@ $getResults= sqlsrv_query($con, $sql);
 echo("a");
 if (sizeof(sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) == 0) {
 	echo("reached");
-	$sql = "INSERT INTO dbo.Articles (url_long, upvotes, downvotes, title, wiki)
+	$sql = "INSERT INTO Articles (url_long, upvotes, downvotes, title, wiki)
 	VALUES ('" . $urlLong . "', 0, 0, '" . $title . "', '');";
 	$getResults= sqlsrv_query($con, $sql);
 }
