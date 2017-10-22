@@ -21,7 +21,8 @@ echo($getResults);
 	$tempArray = array();
 
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-  echo json_encode($resultArray);
+	echo ($row['url_long'] . " " . $row['upvotes'] . PHP_EOL);
+	echo json_encode($resultArray);
 }
 
  
